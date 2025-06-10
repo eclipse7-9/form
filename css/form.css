@@ -1,0 +1,167 @@
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #3053f0 0%, #0e045b 100%);
+    min-height: 100vh;
+}
+
+.contenedor {
+
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.progreso-formulario{
+
+    width: 100%;
+    height: 6px;
+    background-color: #e1e5e9;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+}
+
+.barra-progreso{
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    width: 100%;
+    transition: width 0.5s ease;
+    border-radius: 3px;
+}
+
+.form-group {
+
+    margin-bottom: 25px;
+    position: relative;
+}
+
+h1 {
+
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+label {
+
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+textarea,select,input{
+
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+input,.valido,select.valido,textarea.valido {
+    border-color: #bbf3c8;
+    background-color: #e6ffed
+}
+
+input.invalido,select.invalido,textarea.invalido {
+    border-color: #ffcacf;
+    background-color: #f8d7da;
+}
+
+input:focus,select:focus,textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+.mensaje-error {
+
+    color: #d9534f;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+.mensaje-exito {
+
+    color: #5cb85c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.password-strength {
+
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.strength-weak {
+    color: #d9534f;
+    width: 25%;
+}
+
+.strength-medium {
+    color: #f0ad4e;
+    width: 50%;
+}
+
+.strength-strong {
+    color: #5cb85c;
+    width: 100%;
+}
+
+.strength-very-strong {
+    color: #5cb85c;
+    width: 100%;
+}
+
+.butter {
+
+    background-color: #667eea;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.butter:hover:not(:disabled) {
+    background-color: #5a6bd9;
+    transform: translateY(-2px);
+}
+
+.butter:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.contador-caracteres {
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 5px;
+}
